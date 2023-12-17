@@ -1,6 +1,6 @@
 ## Ownership concepts
 
-#### mut and immutability
+#### Mutability and Immutability
 1. This is a sercure to dondn't change value of the data in case of not be necessary
 
 #### Owner:
@@ -32,7 +32,7 @@ fn add_nine1(data: Vec<i32>) { }
 
 ---
 - There are only three options:
-    - `clone()`
+    - Make copies with `clone()`
     - borrowing reference `&`
     - Move "owner"
 ---
