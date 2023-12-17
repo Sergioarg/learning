@@ -29,6 +29,14 @@ fn add_nine1(data: Vec<i32>) { }
 ```
 
 #### References as Borrowing
+
+---
+- There are only three options:
+    - `clone()`
+    - borrowing reference `&`
+    - Move "owner"
+---
+
 - References - Dangling Pointers
 - Borrowing
 - `change_with_own` and `change_value_in_ref` depends of the use case of the problem to solve
