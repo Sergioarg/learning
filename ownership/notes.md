@@ -69,6 +69,15 @@ fn change_value_in_ref(some_string: &mut String) { // &mut String -> ref de 's'
 }
 ```
 
+```rust
+// Other option
+fn main() {
+    let s = String::from("Hello");
+    let final_text = format!("{} {} ", s ,"Rust".repeat(10_000_000));
+    println!("Final s:\n{}", final_text);
+}
+```
+
 #### Borrow checker
 Rules:
 - &mut - &immutable  at same time forbidden
