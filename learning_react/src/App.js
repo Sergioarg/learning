@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Apples from "./components/Apples";
 import Bag from "./components/Bag";
 import Card from "./components/Card";
@@ -7,6 +8,12 @@ import Pears from "./components/Pears";
 
 function App() {
 
+    const [name, setWord] = useState('Peter');
+
+    function handleClick() {
+        setWord('Parker');
+    }
+
 
     return (
         <div className="App">
@@ -15,7 +22,8 @@ function App() {
             <Card h2="Second card's h2" h3="Second card's h3" />
             <Card h2="Third card's h2" h3="Third card's h3" />
 
-            <Heading firstName="Bob"/>
+            <Heading firstName={name} />
+            <button onClick={handleClick}>Click to change</button>
             <Bag children={<Apples color="yellow" number="5" />} />
             <Bag children={<Pears friend="Peter" />} />
         </div>
