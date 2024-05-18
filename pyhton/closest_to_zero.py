@@ -1,6 +1,7 @@
 """ Question 8 """
 
 def closest_to_zero(ints):
+    """ closests to zero """
     # Step 1: Check if ints is None
     if ints is None:
         return 0
