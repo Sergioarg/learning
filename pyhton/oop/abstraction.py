@@ -9,8 +9,13 @@ Abstraccion:
 from abc import ABC, abstractmethod
 
 class Figura(ABC):
-    @abstractmethod
+
     def calcular_area(self):
+        print("ABC: Calculate area")
+        return True
+
+    @abstractmethod
+    def calcular_perimetro(self):
         pass
 
 class Rectangulo(Figura):
@@ -22,15 +27,22 @@ class Rectangulo(Figura):
     def calcular_area(self):
         return self.base * self.altura
 
+    def calcular_perimetro(self):
+        return 2 * (self.base + self.altura)
+
 class Circulo(Figura):
     """ Doc """
     def __init__(self, radio):
         self.radio = radio
 
-    def calcular_area(self):
-        return 3.14159 * self.radio**2
+    # def calcular_area(self):
+    #     return 3.14159 * self.radio ** 2
+
+    def calcular_perimetro(self):
+        return 2 * 3.14159 * self.radio
 
 rectangulo = Rectangulo(5, 3)
 circulo = Circulo(2)
-print(rectangulo.calcular_area())  # Salida: 15
-print(circulo.calcular_area())  # Salida: 12.56636
+
+print("Rectangulo: ", rectangulo.calcular_area())  # Salida: 15
+print("Circulo: ", circulo.calcular_area())  # Salida: 12.56636
